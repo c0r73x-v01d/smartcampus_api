@@ -1,0 +1,62 @@
+package com.smartcampus.model;
+
+/**
+ *
+ * @author w2024087
+ */
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Room {
+    private String id;
+    private String name;
+    private int capacity;
+    // sensorIds as an empty list to avoid NullPointerException
+    // Ex.: room.getSensorIds().add("CSCI-001") --> will cause crash
+    private List<String> sensorIds = new ArrayList<>();
+    
+    // Empty constructor so that Jackson could create Room object
+    public Room() { };
+    
+    // constructor
+    public Room(String id, String name, int capacity) {
+        this.id = id;
+        this.name = name;
+        this.capacity = capacity;
+    }
+    
+    // setters and getters
+    
+    public String getId() {
+        return id;
+    }
+    
+    public void setId(String id) {
+        this.id = id;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public int getCapacity() {
+        return capacity;
+    }
+    
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+    
+    public List<String> getSensorIds() {
+        return sensorIds;
+    }
+    
+    public void setSensorIds(List<String> sensorIds) {
+        this.sensorIds = sensorIds;
+    }
+}
