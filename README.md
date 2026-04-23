@@ -81,7 +81,45 @@ src/main/java/com/smartcampus/
 | POST   | `/api/v1/sensors/{id}/readings` | Add a new reading (updates `currentValue`)  |
 
 ---
-## 3. curl Examples
+
+## 3. Build & Run
+
+### Prerequisites
+
+- Java 17 or later
+- Maven 3.6 or later
+
+### Build
+
+```bash
+mvn clean package
+```
+
+### Run
+
+```bash
+mvn exec:java
+```
+
+or, after packaging:
+
+```bash
+java -cp target/smart-campus-1.0-SNAPSHOT.jar com.smartcampus.Main
+```
+
+On startup you should see:
+
+```
+DataStore seeded: 4 rooms, 6 sensors, 14 readings
+Smart Campus API started: http://localhost:8080/api/v1
+Press Enter to stop the server...
+```
+
+The server listens on `http://localhost:8080/api/v1`. Press Enter in the terminal to shut it down.
+
+---
+
+## 4. curl Examples
 
 ### Discovery
 
@@ -149,7 +187,7 @@ curl -i -X POST "http://localhost:8080/api/v1/rooms" \
 
 ---
 
-## 6. Questions & Answers
+## 5. Questions & Answers
 
 ### Part 1.1 - Default lifecycle of a JAX-RS resource class
 
