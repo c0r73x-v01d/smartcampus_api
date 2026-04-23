@@ -26,7 +26,7 @@ Data is stored in memory using `ConcurrentHashMap` structures — no database is
 
 - **Java 17** 
 - **JAX-RS (Jakarta REST)** via **Jersey**
-- **Grizzly - embedded HTTP server
+- **Grizzly** - embedded HTTP server
 - **Jackson**
 - **Maven** 
 
